@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h2>What is Bitcoin price today?</h2>
+
+<input type="text" id="bitcoin">
+
+<h2>How much $ do you have?</h2>
+<input type="text" id="dollar">
+
+
+<p id="result"></p>
+
+
+<button id="calc">Calculate</button>
+
+<script>
+const bitoc = document.getElementById("bitcoin");
+const dollar = document.getElementById("dollar");
+const result = document.getElementById("result");
+const calc = document.getElementById("calc");
+calc.addEventListener("click" , function (){
+  const res = parseFloat(dollar.value) / parseFloat(bitoc.value);
+ return result.innerHTML = `You can buy ${res.toFixed(7)} BTC`;
+})
+
+</script>
+</body>
+</html>
